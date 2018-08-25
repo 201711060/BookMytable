@@ -1,0 +1,187 @@
+-- phpMyAdmin SQL Dump
+-- version 3.1.3.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Apr 04, 2017 at 06:08 AM
+-- Server version: 5.1.33
+-- PHP Version: 5.2.9
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `table_booking`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admins`
+--
+
+CREATE TABLE IF NOT EXISTS `admins` (
+  `ad_id` int(4) NOT NULL AUTO_INCREMENT,
+  `ad_nm` varchar(255) NOT NULL,
+  `ad_pwd` varchar(255) NOT NULL,
+  PRIMARY KEY (`ad_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`ad_id`, `ad_nm`, `ad_pwd`) VALUES
+(1, 'imperial', 'imperial'),
+(2, 'admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `food_categories`
+--
+
+CREATE TABLE IF NOT EXISTS `food_categories` (
+  `fcat_id` int(4) NOT NULL AUTO_INCREMENT,
+  `fcat_rst_id` int(4) NOT NULL,
+  `fcat_nm` varchar(255) NOT NULL,
+  `fcat_img` varchar(255) NOT NULL,
+  PRIMARY KEY (`fcat_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+
+--
+-- Dumping data for table `food_categories`
+--
+
+INSERT INTO `food_categories` (`fcat_id`, `fcat_rst_id`, `fcat_nm`, `fcat_img`) VALUES
+(33, 1, 'Punjabi', '1491223329-punjabi1.jpg'),
+(24, 3, 'aaaaa', ''),
+(28, 1, 'Dessert', '1490799959-dessert5.jpg'),
+(32, 1, 'Chinese', '1491223308-chinese2.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu_items`
+--
+
+CREATE TABLE IF NOT EXISTS `menu_items` (
+  `mitm_id` int(4) NOT NULL AUTO_INCREMENT,
+  `mitm_rst_id` int(4) NOT NULL,
+  `mitm_cat_id` int(4) NOT NULL,
+  `mitm_title` varchar(255) NOT NULL,
+  `mitm_desc` varchar(255) NOT NULL,
+  `mitm_img1` varchar(255) NOT NULL,
+  `mitm_img2` varchar(255) NOT NULL,
+  `mitm_rate` int(4) NOT NULL,
+  `mitm_is_spicy` varchar(255) NOT NULL,
+  `mitm_is_jain` varchar(255) NOT NULL,
+  PRIMARY KEY (`mitm_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `menu_items`
+--
+
+INSERT INTO `menu_items` (`mitm_id`, `mitm_rst_id`, `mitm_cat_id`, `mitm_title`, `mitm_desc`, `mitm_img1`, `mitm_img2`, `mitm_rate`, `mitm_is_spicy`, `mitm_is_jain`) VALUES
+(12, 1, 33, 'Butter Roti', 'dnbvjslkfhk', '1491223657-punjabi1.jpg', '1491223657-punjabi2.jpg', 55, '', ''),
+(10, 1, 32, 'Manchurian', 'sbfhdgsjf', '1491223510-chinese1.jpg', '1491223510-chinese1.jpg', 150, '', ''),
+(11, 1, 32, 'Paneer Tikka Masala', 'dvhbljkvhfj', '1491223621-punjabi3.jpg', '1491223621-punjabi4.jpg', 200, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `restaurants`
+--
+
+CREATE TABLE IF NOT EXISTS `restaurants` (
+  `rst_id` int(4) NOT NULL AUTO_INCREMENT,
+  `rst_nm` varchar(255) NOT NULL,
+  `rst_pwd` varchar(10) NOT NULL,
+  `rst_email` varchar(255) NOT NULL,
+  `rst_phn1` varchar(10) NOT NULL,
+  `rst_phn2` varchar(10) NOT NULL,
+  `rst_addr` varchar(255) NOT NULL,
+  `rst_desc` varchar(255) NOT NULL,
+  `rst_img1` varchar(255) NOT NULL,
+  `rst_img2` varchar(255) NOT NULL,
+  `rst_img3` varchar(255) NOT NULL,
+  `rst_is_verified` tinyint(1) NOT NULL,
+  PRIMARY KEY (`rst_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- Dumping data for table `restaurants`
+--
+
+INSERT INTO `restaurants` (`rst_id`, `rst_nm`, `rst_pwd`, `rst_email`, `rst_phn1`, `rst_phn2`, `rst_addr`, `rst_desc`, `rst_img1`, `rst_img2`, `rst_img3`, `rst_is_verified`) VALUES
+(1, 'imperial', '12345', 'imperial@gmail.com', '7878787878', '9898989898', 'dmnzvmlsnfkvs', 'nvsm,nbkjdn.dfbgb', '1.jpg', '1.jpg', '1.jpg', 1),
+(2, 'appplebit', 'applebite', 'applebite@gmail.com', '9898989898', '8794561230', 'dbfdhheyynhdagsdfdsdgsd', 'shwfdhwrjy', '1488202980-01.jpg', '1488202980-01.jpg', '1488202980-01.jpg', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tables`
+--
+
+CREATE TABLE IF NOT EXISTS `tables` (
+  `tbl_id` int(4) NOT NULL AUTO_INCREMENT,
+  `tbl_rst_id` int(4) NOT NULL,
+  `tbl_nm` varchar(255) NOT NULL,
+  PRIMARY KEY (`tbl_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `tables`
+--
+
+INSERT INTO `tables` (`tbl_id`, `tbl_rst_id`, `tbl_nm`) VALUES
+(1, 1, 'Table-1'),
+(7, 1, 'Table-2'),
+(8, 1, 'Table-3'),
+(9, 1, 'Table-4');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table_bookings`
+--
+
+CREATE TABLE IF NOT EXISTS `table_bookings` (
+  `tbk_id` int(4) NOT NULL AUTO_INCREMENT,
+  `tbk_tbl_id` int(4) NOT NULL,
+  `tbk_date` date NOT NULL,
+  `tbk_time_slot` varchar(255) NOT NULL,
+  `tbk_nm` varchar(255) NOT NULL,
+  `tbk_phn` varchar(10) NOT NULL,
+  `tbk_members` int(2) NOT NULL,
+  PRIMARY KEY (`tbk_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `table_bookings`
+--
+
+INSERT INTO `table_bookings` (`tbk_id`, `tbk_tbl_id`, `tbk_date`, `tbk_time_slot`, `tbk_nm`, `tbk_phn`, `tbk_members`) VALUES
+(3, 1, '0000-00-00', '7:00', 'vadas', '254532', 20),
+(7, 1, '2017-03-31', '6:00', 'dhahfj', '543243545', 54);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table_booking_items`
+--
+
+CREATE TABLE IF NOT EXISTS `table_booking_items` (
+  `tbi_id` int(4) NOT NULL AUTO_INCREMENT,
+  `tbi_tbk_id` int(4) NOT NULL,
+  `tbi_mitm_id` int(4) NOT NULL,
+  `tbi_mitm_qty` int(4) NOT NULL,
+  PRIMARY KEY (`tbi_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `table_booking_items`
+--
+
+INSERT INTO `table_booking_items` (`tbi_id`, `tbi_tbk_id`, `tbi_mitm_id`, `tbi_mitm_qty`) VALUES
+(2, 3, 1, 2);

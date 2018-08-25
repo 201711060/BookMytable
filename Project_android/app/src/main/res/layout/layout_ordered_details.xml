@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvName_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/textView8"
+            android:layout_toStartOf="@+id/textView8"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvName_details"
+            android:layout_toLeftOf="@+id/tvDate_details"
+            android:layout_toStartOf="@+id/tvDate_details"
+            android:text="Dt. "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tvDate_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/textView8"
+            android:text="date"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tvTime_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tvDate_details"
+            android:layout_alignRight="@+id/tvDate_details"
+            android:layout_below="@+id/tvName_details"
+            android:layout_marginTop="5dp"
+            android:text="time_slot"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvTime_details"
+            android:layout_toLeftOf="@+id/tvTime_details"
+            android:layout_toStartOf="@+id/tvTime_details"
+            android:text="Time: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tvPhn_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvName_details"
+            android:layout_alignStart="@+id/tvName_details"
+            android:layout_alignTop="@+id/textView11"
+            android:layout_toLeftOf="@+id/textView11"
+            android:layout_toStartOf="@+id/textView11"
+            android:text="phone number"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="17sp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignEnd="@+id/tvTime_details"
+            android:layout_alignRight="@+id/tvTime_details"
+            android:layout_below="@+id/tvTime_details"
+            android:layout_marginTop="10dp"
+            android:background="#e1e1e1" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvTblNm_details"
+            android:layout_marginTop="10dp"
+            android:background="#e1e1e1" />
+
+        <TextView
+            android:id="@+id/tvRstNm_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/view3"
+            android:layout_marginTop="10dp"
+            android:text="Rst nm"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/tvRstAddrPhn_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvRstNm_details"
+            android:layout_marginTop="10dp"
+            android:text="Address / phn"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tvTblNm_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/view2"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Your table no. is: 1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tvRstEmail_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvRstAddrPhn_details"
+            android:layout_marginTop="10dp"
+            android:text="email"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvYourItems_disp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginRight="0.5dp"
+                android:text="Your Items"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFF"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tvItemsQty_disp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginLeft="0.5dp"
+                android:text="Item's Qty."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFF"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvDetails"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="project.innovation.com.project">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".Helper.GlobVars"
+        android:allowBackup="true"
+        android:icon="@drawable/logo2"
+        android:label="BookMyTable"
+        android:supportsRtl="true"
+
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".restaurants_details" />
+        <activity android:name=".Booking_Details" />
+        <activity
+            android:name=".splashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".food_categories"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu_Items"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ordered_details"
+            android:exported="true" />
+        <activity android:name=".Feedback" />
+        <activity android:name=".ThankYouActivity"></activity>
+    </application>
+
+</manifest>

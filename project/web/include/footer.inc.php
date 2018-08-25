@@ -1,0 +1,1 @@
+<p>&copy; Table_Booking. All rights reserved.</p>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!--<ImageView
+            android:id="@+id/ivPic"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:padding="20dp"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager_rest_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                tools:listitem="@layout/design_for_slider_image_pager_item" />
+
+            <LinearLayout
+                android:id="@+id/viewPagerCountDots_rest_details"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#33000000"
+                android:fitsSystemWindows="true"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:id="@+id/tvResNm"
+            android:padding="9dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/tvDesc"
+            android:padding="9dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/tvAddr"
+            android:padding="9dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/tvEmail"
+            android:padding="9dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/tvPhn1"
+            android:padding="9dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/tvPhn2"
+            android:padding="9dp"/>
+
+        <Button
+            android:text="Book Table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBook"
+            android:onClick="btnBook_Click"
+            android:textColor="#FFF"
+            android:background="@color/colorPrimary"
+            android:padding="20dp"
+            android:layout_marginTop="15dp"
+            />
+
+    </LinearLayout>
+</ScrollView>
